@@ -4,13 +4,13 @@
 # Licensed under AGPL v3
 # Copyright(C) 2019 kmahyyg
 #
-import time
 
-from web3 import Web3
-import logging
 import json
+import logging
 import sys
+
 import requests
+from web3 import Web3
 
 logger = logging.getLogger('default_log')
 handler = logging.StreamHandler()
@@ -35,7 +35,6 @@ except IndexError:
     printusage()
     sys.exit(1)
 
-
 # SSH Port Forward
 ethneturl = "http://localhost:8545"
 logger.critical("ssh -L 8545:127.0.0.1:63991 -N -T -i storage/chainsaw/bobby.key.enc bobby@10.10.10.142 -v")
@@ -53,7 +52,6 @@ if r.status_code == 400:
 else:
     logger.error("Private ETH Network forward to {localip} is not successful.".format(localip=ethneturl))
     sys.exit(1)
-
 
 # Web3Py related code
 w3eng = Web3(Web3.HTTPProvider(ethneturl))
