@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6e27c4-5f7a-4f97-8c3a-1dbd185762fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/ChainsawClub.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/ChainsawClub.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chainsaw-ROOT-web3-contract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chainsaw-ROOT-web3-contract.py" beforeDir="false" afterPath="$PROJECT_DIR$/chainsaw-ROOT-web3-contract.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chainsaw-ROOT-web3-contract.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="106" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="270">
+              <caret line="78" column="25" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
               <folding>
                 <element signature="e#106#127#0" expanded="true" />
               </folding>
@@ -214,12 +211,12 @@
       <updated>1563886326520</updated>
       <workItem from="1563886328656" duration="10368000" />
       <workItem from="1563936960418" duration="124000" />
-      <workItem from="1563942281090" duration="5730000" />
+      <workItem from="1563942281090" duration="5857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16222000" />
+    <option name="totallyTimeSpent" value="16349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="36" width="1920" height="1045" extended-state="6" />
@@ -230,7 +227,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32930845" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39297476" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39297476" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -239,7 +236,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32821077" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32821077" />
       <window_info anchor="bottom" x="960" y="62" width="960" height="990" id="Python Console" order="12" weight="0.32967034" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -297,8 +294,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chainsaw-ROOT-web3-contract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="270">
+          <caret line="78" column="25" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
           <folding>
             <element signature="e#106#127#0" expanded="true" />
           </folding>
