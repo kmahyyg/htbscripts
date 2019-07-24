@@ -10,7 +10,7 @@ No warranty, All responsibility is on you.
 
 # Special Notes
 
-All scripts without any notes below can be run individually, but you need to install the python library dependencies yourself.
+All scripts without any notes below can be run individually, but you need to install the python library dependencies yourself. If nothing is noted below, check the usage recorded in the script file.
 
 | FileName | Special Note |
 |:--------:|:------------:|
