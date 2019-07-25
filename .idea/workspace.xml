@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6e27c4-5f7a-4f97-8c3a-1dbd185762fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/onekeyhttpserver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL-Auth-Server" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL-Auth-Server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/krypto-user-loginpanel.py" beforeDir="false" afterPath="$PROJECT_DIR$/krypto-user-loginpanel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +131,7 @@
       <workItem from="1563942281090" duration="15700000" />
       <workItem from="1563978972907" duration="428000" />
       <workItem from="1563979489877" duration="842000" />
-      <workItem from="1563980397937" duration="9068000" />
+      <workItem from="1563980397937" duration="9168000" />
     </task>
     <servers />
   </component>
