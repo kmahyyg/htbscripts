@@ -211,3 +211,4 @@ dmypy.json
 # User Script Generated Content
 firstpost
 secondsend.html
+*.pid
