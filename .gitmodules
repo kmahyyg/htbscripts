@@ -1,0 +1,3 @@
+[submodule "MySQL-Auth-Server"]
+	path = MySQL-Auth-Server
+	url = git@github.com:kmahyyg/MySQL-Auth-Server.git
