@@ -45,4 +45,6 @@ if __name__ == '__main__':
                         nargs='?',
                         help='Specify alternate port [default: 8080]')
     args = parser.parse_args()
+    with open("onekeyhttpserver.pid", "w") as pidfile:
+        pidfile.write(str(os.getpid()))
     http.server.test(HandlerClass=HTTPRequestHandler, port=args.port, bind=args.bind)

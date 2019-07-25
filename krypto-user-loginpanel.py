@@ -24,7 +24,7 @@ def callfakeserv():
         print("This script need ROOT privilegegs to open a http server listens on 80.")
         sys.exit(2)
     subprocess.Popen(["python3", "MySQL-Auth-Server/MySQL-Auth-Server.py"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    subprocess.Popen(["python3", "onekeyhttpserver.py", "80"],stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    subprocess.Popen(["python3", "onekeyhttpserver.py", "80"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
 
 def interact():
@@ -68,6 +68,7 @@ def interact():
     write_data_to_fd("secondsend.html", "wb", base64.b64decode(getdata3))
     with open("secondsend.html", "r") as fd2:
         pprint.pprint(fd2.read())
+    os.kill(int(open("onekeyhttpserver.pid", "r").read()))
 
 
 def main():
