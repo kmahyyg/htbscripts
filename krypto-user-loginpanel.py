@@ -68,7 +68,7 @@ def interact():
     write_data_to_fd("secondsend.html", "wb", base64.b64decode(getdata3))
     with open("secondsend.html", "r") as fd2:
         pprint.pprint(fd2.read())
-    os.kill(int(open("onekeyhttpserver.pid", "r").read()))
+    os.kill(int(open("onekeyhttpserver.pid", "r").read()), 9)
 
 
 def main():
