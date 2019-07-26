@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6e27c4-5f7a-4f97-8c3a-1dbd185762fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/kryptos-root-jsonreq.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kryptos-vimcrypt-extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/kryptos-vimcrypt-extract.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/local_web_kryptos.py" beforeDir="false" afterPath="$PROJECT_DIR$/assets/local_web_kryptos.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +50,179 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1:8181/debug" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8181/eval" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;expr&quot;: &quot;2+2&quot;, &quot;sig&quot;: &quot;ad650bf2493f68795f4a0f33607ab1617c8c6cbc0f85da9b68ce443b374c2c8e3c679b1567fbfab5834a8ab92836538da3038326909d18ad8340457349e6b022f29b22264c8122967f6f9ad059293e6f4300694950c66c9c76044ee249638616&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8181/eval" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;expr&quot;: &quot;EXPLOIT HERE&quot;, &quot;sig&quot;: &quot;7ca9237d&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8181/eval" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;expr&quot;: &quot;EXPLOIT HERE&quot;, &quot;sig&quot;: &quot;sign(expr)&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8181/eval" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;expr&quot;: &quot;EXPLOIT HERE&quot;, &quot;sig&quot;: &quot;SIGNATURE HERE&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8181/eval" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="'%7B%22expr%22%3A+%22EXPLOIT+HERE%22%2C+%22sig%22%3A+%22SIGNATURE+HERE%22%7D" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8181/eval" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="%7B%22expr%22%3A+%22EXPLOIT+HERE%22%2C+%22sig%22%3A+%22SIGNATURE+HERE%22%7D" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -61,8 +235,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.kryptos-vimcrypt">
-    <configuration name="anothertest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.kryptos-root-jsonreq">
+    <configuration name="rest-api_1#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api_1#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" index="2">
+      <method v="2" />
+    </configuration>
+    <configuration name="kryptos-root-jsonreq" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="htbscripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -70,79 +250,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/anothertest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kryptos-root-jsonreq.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="chainsaw-ROOT-web3-contract" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="htbscripts" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chainsaw-ROOT-web3-contract.py" />
-      <option name="PARAMETERS" value="0xe1d42d8b105Bbd72682e4e7Cb673B4318436309C" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="chainsaw-web3-smart-contract" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="htbscripts" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chainsaw-USER-web3-smart-contract.py" />
-      <option name="PARAMETERS" value="0x40021AaE382aF7b06C8f9AA38Ff6e795F81b647c 10.10.16.80 14499" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="krypto-user-loginpanel" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="htbscripts" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/krypto-user-loginpanel.py" />
-      <option name="PARAMETERS" value="10.10.16.80" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -172,20 +286,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="local_web_kryptos" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="htbscripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assets" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assets/local_web_kryptos.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.chainsaw-web3-smart-contract" />
-      <item itemvalue="Python.chainsaw-ROOT-web3-contract" />
-      <item itemvalue="Python.krypto-user-loginpanel" />
-      <item itemvalue="Python.anothertest" />
+      <item itemvalue="HTTP Request.rest-api_1#1" />
+      <item itemvalue="HTTP Request.rest-api_1#2" />
       <item itemvalue="Python.kryptos-vimcrypt" />
+      <item itemvalue="Python.local_web_kryptos" />
+      <item itemvalue="Python.kryptos-root-jsonreq" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.kryptos-root-jsonreq" />
+        <item itemvalue="HTTP Request.rest-api_1#2" />
+        <item itemvalue="Python.local_web_kryptos" />
+        <item itemvalue="HTTP Request.rest-api_1#1" />
         <item itemvalue="Python.kryptos-vimcrypt" />
-        <item itemvalue="Python.krypto-user-loginpanel" />
-        <item itemvalue="Python.anothertest" />
-        <item itemvalue="Python.chainsaw-ROOT-web3-contract" />
-        <item itemvalue="Python.chainsaw-web3-smart-contract" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +343,8 @@
       <workItem from="1563980397937" duration="13891000" />
       <workItem from="1564066256910" duration="5712000" />
       <workItem from="1564111761681" duration="302000" />
-      <workItem from="1564112106444" duration="834000" />
+      <workItem from="1564112106444" duration="10228000" />
+      <workItem from="1564131400686" duration="4534000" />
     </task>
     <servers />
   </component>
@@ -240,7 +377,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/htbscripts$chainsaw_web3_smart_contract.coverage" NAME="chainsaw-web3-smart-contract Coverage Results" MODIFIED="1563943513209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/htbscripts$kryptos_root_jsonreq.coverage" NAME="kryptos-root-jsonreq Coverage Results" MODIFIED="1564134771434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$kryptos_vimcrypt.coverage" NAME="kryptos-vimcrypt Coverage Results" MODIFIED="1564067970578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/htbscripts$local_web_kryptos.coverage" NAME="local_web_kryptos Coverage Results" MODIFIED="1564134753532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assets" />
     <SUITE FILE_PATH="coverage/htbscripts$krypto_user_loginpanel.coverage" NAME="krypto-user-loginpanel Coverage Results" MODIFIED="1564067963730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$chainsaw_ROOT_web3_contract.coverage" NAME="chainsaw-ROOT-web3-contract Coverage Results" MODIFIED="1564016013155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$anothertest.coverage" NAME="anothertest Coverage Results" MODIFIED="1564023367839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
