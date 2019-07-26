@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6e27c4-5f7a-4f97-8c3a-1dbd185762fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kryptos-vimcrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,6 +27,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -60,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.krypto-user-loginpanel">
+  <component name="RunManager" selected="Python.kryptos-vimcrypt">
     <configuration name="anothertest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="htbscripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -149,14 +151,38 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="kryptos-vimcrypt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="htbscripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kryptos-vimcrypt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.chainsaw-web3-smart-contract" />
       <item itemvalue="Python.chainsaw-ROOT-web3-contract" />
       <item itemvalue="Python.krypto-user-loginpanel" />
       <item itemvalue="Python.anothertest" />
+      <item itemvalue="Python.kryptos-vimcrypt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.kryptos-vimcrypt" />
         <item itemvalue="Python.krypto-user-loginpanel" />
         <item itemvalue="Python.anothertest" />
         <item itemvalue="Python.chainsaw-ROOT-web3-contract" />
@@ -180,6 +206,7 @@
       <workItem from="1563978972907" duration="428000" />
       <workItem from="1563979489877" duration="842000" />
       <workItem from="1563980397937" duration="13891000" />
+      <workItem from="1564066256910" duration="5712000" />
     </task>
     <servers />
   </component>
@@ -212,7 +239,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/htbscripts$chainsaw_web3_smart_contract.coverage" NAME="chainsaw-web3-smart-contract Coverage Results" MODIFIED="1563943513209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/htbscripts$krypto_user_loginpanel.coverage" NAME="krypto-user-loginpanel Coverage Results" MODIFIED="1564024115315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/htbscripts$kryptos_vimcrypt.coverage" NAME="kryptos-vimcrypt Coverage Results" MODIFIED="1564067970578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/htbscripts$krypto_user_loginpanel.coverage" NAME="krypto-user-loginpanel Coverage Results" MODIFIED="1564067963730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$chainsaw_ROOT_web3_contract.coverage" NAME="chainsaw-ROOT-web3-contract Coverage Results" MODIFIED="1564016013155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$anothertest.coverage" NAME="anothertest Coverage Results" MODIFIED="1564023367839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
   </component>
