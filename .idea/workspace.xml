@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bb6e27c4-5f7a-4f97-8c3a-1dbd185762fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kryptos-root-jsonreq.py" beforeDir="false" afterPath="$PROJECT_DIR$/kryptos-root-jsonreq.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -343,7 +342,8 @@
       <workItem from="1564066256910" duration="5712000" />
       <workItem from="1564111761681" duration="302000" />
       <workItem from="1564112106444" duration="10228000" />
-      <workItem from="1564131400686" duration="9405000" />
+      <workItem from="1564131400686" duration="9477000" />
+      <workItem from="1564190307977" duration="4000" />
     </task>
     <servers />
   </component>
