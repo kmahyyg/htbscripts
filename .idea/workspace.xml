@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6e27c4-5f7a-4f97-8c3a-1dbd185762fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/carrier-native-ftp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/onekeyftpserver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe-py2-bof-1337.py" beforeDir="false" afterPath="$PROJECT_DIR$/safe-py2-bof-1337.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carrier-native-ftp.py" beforeDir="false" afterPath="$PROJECT_DIR$/carrier-native-ftp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onekeyftpserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/onekeyftpserver.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -371,7 +369,8 @@
       <workItem from="1564561269919" duration="3452000" />
       <workItem from="1564581969335" duration="1239000" />
       <workItem from="1564672550996" duration="690000" />
-      <workItem from="1564712039574" duration="7863000" />
+      <workItem from="1564712039574" duration="8232000" />
+      <workItem from="1564731891392" duration="3859000" />
     </task>
     <servers />
   </component>

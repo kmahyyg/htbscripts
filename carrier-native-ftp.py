@@ -44,7 +44,7 @@ class FTPServ(threading.Thread):
         self.addr = address
 
     def __del__(self):
-        with open("recorded-ftp.log", "w+") as f:
+        with open("recorded-ftp.log", "a") as f:
             data = str(self.addr) + " | " + str(self.username) + ":" + str(self.password) + "\n"
             f.write(data)
 
