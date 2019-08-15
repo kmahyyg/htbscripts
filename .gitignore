@@ -213,3 +213,6 @@ firstpost
 secondsend.html
 *.pid
 recorded-ftp.log
+/assets/syslog
+/assets/auth.json
+/assets/thiefdev.log

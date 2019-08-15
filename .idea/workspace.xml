@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb6e27c4-5f7a-4f97-8c3a-1dbd185762fd" name="Default Changelist" comment="" />
+    <list default="true" id="bb6e27c4-5f7a-4f97-8c3a-1dbd185762fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/heist-rpc-username-enum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,10 +235,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.carrier-native-ftp">
-    <configuration name="rest-api_1#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" index="2">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.heist-rpc-username-enum">
     <configuration name="carrier-native-ftp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="htbscripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -279,6 +280,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="heist-rpc-username-enum" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="htbscripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/heist-rpc-username-enum.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="kryptos-root-jsonreq" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="htbscripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -301,7 +324,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="local_web_kryptos" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="usbripper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="htbscripts" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -309,12 +332,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assets" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assets/local_web_kryptos.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/usbripper.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -324,19 +347,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="HTTP Request.rest-api_1#2" />
-      <item itemvalue="Python.local_web_kryptos" />
       <item itemvalue="Python.kryptos-root-jsonreq" />
       <item itemvalue="Python.carrier-user-rce" />
       <item itemvalue="Python.carrier-native-ftp" />
+      <item itemvalue="Python.usbripper" />
+      <item itemvalue="Python.heist-rpc-username-enum" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.heist-rpc-username-enum" />
+        <item itemvalue="Python.usbripper" />
         <item itemvalue="Python.carrier-native-ftp" />
         <item itemvalue="Python.carrier-user-rce" />
         <item itemvalue="Python.kryptos-root-jsonreq" />
-        <item itemvalue="HTTP Request.rest-api_1#2" />
-        <item itemvalue="Python.local_web_kryptos" />
       </list>
     </recent_temporary>
   </component>
@@ -367,6 +390,11 @@
       <workItem from="1564672550996" duration="690000" />
       <workItem from="1564712039574" duration="8232000" />
       <workItem from="1564731891392" duration="3927000" />
+      <workItem from="1565418294531" duration="111000" />
+      <workItem from="1565418442473" duration="1806000" />
+      <workItem from="1565833737067" duration="1998000" />
+      <workItem from="1565835867507" duration="645000" />
+      <workItem from="1565849115406" duration="2356000" />
     </task>
     <servers />
   </component>
@@ -392,8 +420,10 @@
     <SUITE FILE_PATH="coverage/htbscripts$chainsaw_web3_smart_contract.coverage" NAME="chainsaw-web3-smart-contract Coverage Results" MODIFIED="1563943513209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$kryptos_root_jsonreq.coverage" NAME="kryptos-root-jsonreq Coverage Results" MODIFIED="1564147205788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$kryptos_vimcrypt.coverage" NAME="kryptos-vimcrypt Coverage Results" MODIFIED="1564067970578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/htbscripts$usbripper.coverage" NAME="usbripper Coverage Results" MODIFIED="1565849217265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$local_web_kryptos.coverage" NAME="local_web_kryptos Coverage Results" MODIFIED="1564134753532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assets" />
     <SUITE FILE_PATH="coverage/htbscripts$krypto_user_loginpanel.coverage" NAME="krypto-user-loginpanel Coverage Results" MODIFIED="1564067963730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/htbscripts$heist_rpc_username_enum.coverage" NAME="heist-rpc-username-enum Coverage Results" MODIFIED="1565855867244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$chainsaw_ROOT_web3_contract.coverage" NAME="chainsaw-ROOT-web3-contract Coverage Results" MODIFIED="1564016013155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$anothertest.coverage" NAME="anothertest Coverage Results" MODIFIED="1564023367839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
   </component>
