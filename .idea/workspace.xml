@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6e27c4-5f7a-4f97-8c3a-1dbd185762fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/generate_ldap_attrdict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boxctf_brute_attrname.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boxctf_brute_usrname.py" beforeDir="false" afterPath="$PROJECT_DIR$/boxctf_brute_usrname.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boxctf_brute_usrname.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -251,7 +250,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/boxctf_brute_usrname.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/boxctf_brute_attrname.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -324,7 +323,7 @@
       <workItem from="1566311881371" duration="6000" />
       <workItem from="1566542751119" duration="2450000" />
       <workItem from="1566720139496" duration="2333000" />
-      <workItem from="1566724045090" duration="9169000" />
+      <workItem from="1566724045090" duration="11008000" />
     </task>
     <servers />
   </component>
