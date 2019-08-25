@@ -234,6 +234,35 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="boxctf_brute_usrname" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="htbscripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/boxctf_brute_usrname.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.boxctf_brute_usrname" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -269,7 +298,7 @@
       <workItem from="1566311881371" duration="6000" />
       <workItem from="1566542751119" duration="2450000" />
       <workItem from="1566720139496" duration="2333000" />
-      <workItem from="1566724045090" duration="190000" />
+      <workItem from="1566724045090" duration="766000" />
     </task>
     <servers />
   </component>
@@ -294,7 +323,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/boxctf_brute_usrname.py</url>
-          <line>28</line>
+          <line>31</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -312,6 +341,7 @@
     <SUITE FILE_PATH="coverage/htbscripts$heist_rpc_username_enum.coverage" NAME="heist-rpc-username-enum Coverage Results" MODIFIED="1566724165788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$chainsaw_ROOT_web3_contract.coverage" NAME="chainsaw-ROOT-web3-contract Coverage Results" MODIFIED="1564016013155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/htbscripts$anothertest.coverage" NAME="anothertest Coverage Results" MODIFIED="1564023367839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/htbscripts$boxctf_brute_usrname.coverage" NAME="boxctf_brute_usrname Coverage Results" MODIFIED="1566724519702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="masterDetails">
     <states>

