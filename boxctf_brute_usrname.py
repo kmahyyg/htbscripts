@@ -39,5 +39,6 @@ while usrname != '':
             print("- [+] Username: " + postparam["inputUsername"])
         usrname = f.readline().strip()
     except requests.exceptions.ConnectionError as ce:
-        time.sleep(300)
+        print("Get Banned! Wait 6 mins.")
+        time.sleep(360)
         continue
