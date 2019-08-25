@@ -216,3 +216,5 @@ recorded-ftp.log
 /assets/syslog
 /assets/auth.json
 /assets/thiefdev.log
+*.dic
+!/common_ldap_attr.dic

