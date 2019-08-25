@@ -6,14 +6,14 @@
 # Login with username: %2a
 #
 
-from​ requests ​import​ get
-from​ datetime ​import​ datetime
+from requests import get
+from datetime import datetime
 from os import system
 
-url = ​'http://10.10.10.122'
+url = 'http://10.10.10.122'
 res = get(url)
-date = res.headers[​'Date'​]
-pattern = ​'%a, %d %b %Y %H:%M:%S GMT'
+date = res.headers['Date']
+pattern = '%a, %d %b %Y %H:%M:%S GMT'
 obj = datetime.strptime(date, pattern)
 diff = datetime.utcnow() - datetime.now()
 currenttm = str(int(obj.strftime('%s')) - int(diff.total_seconds()))

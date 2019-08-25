@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6e27c4-5f7a-4f97-8c3a-1dbd185762fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/boxctf_get_otptoken.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boxctf_get_otptoken.py" beforeDir="false" afterPath="$PROJECT_DIR$/boxctf_get_otptoken.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -323,7 +322,7 @@
       <workItem from="1566542751119" duration="2450000" />
       <workItem from="1566720139496" duration="2333000" />
       <workItem from="1566724045090" duration="15558000" />
-      <workItem from="1566749258555" duration="436000" />
+      <workItem from="1566749258555" duration="743000" />
     </task>
     <servers />
   </component>
@@ -342,6 +341,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/boxctf_get_otptoken.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/htbscripts$chainsaw_web3_smart_contract.coverage" NAME="chainsaw-web3-smart-contract Coverage Results" MODIFIED="1563943513209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
