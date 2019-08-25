@@ -4,9 +4,16 @@
 import random
 import requests
 
+debug = True
+
 dictfile = '/usr/share/seclists/Usernames/Honeypot-Captures/multiplesources-users-fabian-fingerle.de.txt'
 
-host = '10.10.10.122'
+if debug:
+    host = '127.0.0.1:8181'
+else:
+    host = '10.10.10.122'
+
+
 endp = '/login.php'
 finaluri = 'http://' + host + endp
 
