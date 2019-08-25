@@ -4,7 +4,7 @@
 import random
 import requests
 
-debug = True
+debug = False
 
 
 if debug:
