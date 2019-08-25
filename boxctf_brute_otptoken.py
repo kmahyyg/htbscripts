@@ -44,6 +44,7 @@ try:
             if 'cannot login' in r.text.lower():
                 token += i
                 sys.stdout.write(i)
+                sys.stdout.flush()
             else:
                 pass
 except requests.exceptions.ConnectionError as ce:
