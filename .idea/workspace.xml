@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6e27c4-5f7a-4f97-8c3a-1dbd185762fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/boxctf_brute_attrname.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boxctf_brute_usrname.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/boxctf_brute_attrname.py" beforeDir="false" afterPath="$PROJECT_DIR$/boxctf_brute_attrname.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -323,7 +322,7 @@
       <workItem from="1566311881371" duration="6000" />
       <workItem from="1566542751119" duration="2450000" />
       <workItem from="1566720139496" duration="2333000" />
-      <workItem from="1566724045090" duration="11008000" />
+      <workItem from="1566724045090" duration="11113000" />
     </task>
     <servers />
   </component>

