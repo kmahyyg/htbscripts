@@ -4,11 +4,11 @@
 # `sudo sysctl -w kernel.randomize_va_space=0` to disable ASLR
 # Ref: https://unix.stackexchange.com/questions/89211/
 # Ref: https://linux.die.net/man/8/execstack
-# Ref: http://shell-storm.org/shellcode/files/shellcode-811.php
+# Ref: http://shell-storm.org/shellcode/files/shellcode-881.php
 # Ref: https://stackoverflow.com/questions/38189169/
 # Ref: https://linux-audit.com/linux-aslr-and-kernelrandomize_va_space-setting/
 
-DEBUG_FLAG = True
+DEBUG_FLAG = False
 
 from pwn import *
 context(os="linux", arch="i386")
