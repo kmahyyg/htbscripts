@@ -51,9 +51,11 @@ def rcptto(server, username, port, timeout, domain, brute=False):
 
     try:
         print('[+] Service banner: "{}"'.format(s.recv(1024).strip()))
-        s.send('HELO test@'+ domain+'\r\n'.encode())
+        mhelo = 'HELO '+ domain+' \r\n'
+        s.send(mhelo.encode())
         print('[>] Response for HELO from {}:{} - '.format(server, port) + s.recv(1024).decode().strip())
-        s.send('MAIL FROM: test@'+domain+'\r\n'.encode())
+        mfrom = 'MAIL FROM: test@'+domain+' \r\n'
+        s.send(mfrom.encode())
         print('[>] Response for MAIL HELO from {}:{} - '.format(server, port) + s.recv(1024).decode().strip())
 
     except socket.error as e:
@@ -67,7 +69,7 @@ def rcptto(server, username, port, timeout, domain, brute=False):
     if brute:
         for i in range(len(username)):
             user = username[i]
-            payload = 'RCPT TO:' + user + '@' + domain + '\r\n'
+            payload = 'RCPT TO: ' + user + '@' + domain + ' \r\n'
             try:
                 s.send(payload.encode())
                 res = s.recv(1024).decode().strip()
@@ -76,7 +78,7 @@ def rcptto(server, username, port, timeout, domain, brute=False):
             except Exception as e:
                 print(e)
     else:
-        payload = 'VRFY ' + username + '\r\n'
+        payload = 'RCPT TO: ' + username + '@' + domain + ' \r\n'
         s.send(payload.encode())
         res = s.recv(1024).decode().strip()
 
