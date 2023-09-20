@@ -28,7 +28,7 @@ def interpret_smtp_status_code(resp):
         252:'Cannot VRFY user, but will accept message and attempt delivery', 
         502:'Command not implemented or disallowed', 
         503:'Bad sequence of commands',
-        530:'Access denied (???a Sendmailism)', 
+        530:'[POSSIBLE EXISTENCE INDICATOR] Access denied (???a Sendmailism)', 
         550:'Requested action not taken: mailbox unavailable', 
         551:'User not local; please try <forward-path>', 
     }
