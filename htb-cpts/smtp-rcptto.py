@@ -85,6 +85,8 @@ def rcptto(server, username, port, timeout, domain, brute=False):
         print('[>] Response from {}:{} - '.format(server, port) + interpret_smtp_status_code(res))
         if 'User unknown' in res:
             print('[!] User not found.')
+        elif res.startswith('530 '):
+            print('[++] User Possible Exists: {}'.format(username))
         elif (res.startswith('25') and username in res and '<' in res and '>' in res):
             print('[+] User found: "{}"'.format(res.strip()))
         else:
