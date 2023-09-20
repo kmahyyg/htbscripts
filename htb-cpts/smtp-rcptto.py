@@ -91,7 +91,7 @@ def rcptto(server, username, port, timeout, domain, brute=False):
     s.close()
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2:
+    if len(sys.argv) < 3:
         print('[?] Usage: smtprcptto.py <smtpserver> <domain-name> [username|wordlist] [timeout]')
         print('\t(to specify a port provide it after a colon \':\' in server parameter)')
         sys.exit(0)
@@ -101,9 +101,6 @@ if __name__ == '__main__':
     port = 25 if ':' not in server else int(server[server.find(':')+1:])
     username = sys.argv[3] if len(sys.argv) >= 4 else DEFAULT_WORDLIST
     timeout = DEFAULT_TIMEOUT if len(sys.argv) < 5 else int(sys.argv[4])
-
-    if domain == "" :
-        raise AssertionError("Domain is not provided.")
 
     if os.path.isfile(username):
         names = [] 
