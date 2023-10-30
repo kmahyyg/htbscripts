@@ -68,7 +68,7 @@ def main():
         cred = keyring.get_password(serviceData["dstip"], serviceData["user"])
         if cred is None:
             raise AssertionError("no saved cred, save first.")
-        cmdl = [sshpass, "-p", cred, "ssh", "-oStrictHostKeyChecking=no", serviceData["user"] + "@" + serviceData["dstip"]]
+        cmdl = [sshpass, "-p", cred, "ssh", "-oStrictHostKeyChecking=no", "-D31081", serviceData["user"] + "@" + serviceData["dstip"]]
         print(" ".join(cmdl))
         return
 

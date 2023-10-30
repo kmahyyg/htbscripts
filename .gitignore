@@ -218,3 +218,5 @@ recorded-ftp.log
 /assets/thiefdev.log
 *.dic
 !/common_ldap_attr.dic
+.idea/
+.vscode/
