@@ -18,6 +18,13 @@ parser.add_argument("-p", dest='passwd', type=str, required=False, help="pwnbox 
 parser.add_argument("-s", dest='furl', type=str, required=False, help="full pwnbox url")
 cmdargs = parser.parse_args()
 
+def reset(pwnboxIPFile, serviceData):
+    keyring.delete_password(serviceData["dstip"], serviceData["user"])
+    os.remove(pwnboxIPFile)
+    print("reset done.")
+    return
+
+
 def main():
     sshclient = shutil.which("ssh")
     if not sshclient:
@@ -28,7 +35,7 @@ def main():
     pwnboxIPFile = os.path.expandvars('${HOME}/.config/pwnbox-ip.json')
     # store
     if cmdargs.op == "save":
-        if cmdargs.user == "" or (cmdargs.passwd == "" and cmdargs.dst == "") or cmdargs.furl == "":
+        if cmdargs.user == "" or ((cmdargs.passwd == "" and cmdargs.dst == "") and cmdargs.furl == ""):
             raise AssertionError("user, (dest ip, password)/(full url of viewer) are required. port is always 22.")
         pwnboxIPstr = ""
         pwnboxPwd = cmdargs.passwd
@@ -44,6 +51,14 @@ def main():
             pwnboxIPstr = u2["host"][r1 + len("bird/"):]
         if pwnboxPwd == "":
             raise SystemError("cannot parse url to retrive data")
+        try:
+            if not os.path.exists(pwnboxIPFile):
+                raise AssertionError("pwnbox ip record cannot be found")
+            pwnboxIPConf = open(pwnboxIPFile,"r").read()
+            serviceData = json.loads(pwnboxIPConf)
+            reset(pwnboxIPFile, serviceData)
+        except:
+            pass
         print("Host: ", pwnboxIPstr, " ,Password: ", pwnboxPwd)
         with open(pwnboxIPFile, "w") as fd:
             fd.write(json.dumps({"user": cmdargs.user, "dstip": pwnboxIPstr}))
@@ -60,15 +75,12 @@ def main():
         print("Password: ", keyring.get_password(serviceData["dstip"], serviceData["user"]))
         return
     if cmdargs.op == "reset":
-        keyring.delete_password(serviceData["dstip"], serviceData["user"])
-        os.remove(pwnboxIPFile)
-        print("reset done.")
-        return
+        reset(pwnboxIPFile, serviceData)
     if cmdargs.op == "connect":
         cred = keyring.get_password(serviceData["dstip"], serviceData["user"])
         if cred is None:
             raise AssertionError("no saved cred, save first.")
-        cmdl = [sshpass, "-p", cred, "ssh", "-oStrictHostKeyChecking=no", "-D31081", serviceData["user"] + "@" + serviceData["dstip"]]
+        cmdl = [sshpass, "-p", cred, "ssh", "-D31081", "-oStrictHostKeyChecking=no", serviceData["user"] + "@" + serviceData["dstip"]]
         print(" ".join(cmdl))
         return
 
